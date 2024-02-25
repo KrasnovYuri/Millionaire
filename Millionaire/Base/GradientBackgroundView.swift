@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct BackgroundView: View {
+struct GradientBackgroundView: View {
     var body: some View {
         LinearGradient(
             gradient: Gradient(
@@ -12,8 +12,4 @@ struct BackgroundView: View {
         )
         .edgesIgnoringSafeArea(.all)
     }
-}
-
-#Preview {
-    BackgroundView()
 }

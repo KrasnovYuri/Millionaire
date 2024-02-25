@@ -1,0 +1,82 @@
+    [
+        {
+            "title": "Сколько вдохов делает человеческое тело ежедневно?",
+            "level": 1,
+            "answers": [
+                {
+                    "number": 1,
+                    "title": "Ни одного",
+                    "is_right": false
+                },
+                {
+                    "number": 2,
+                    "title": "20.000",
+                    "is_right": true
+                },
+                {
+                    "number": 3,
+                    "title": "320.000",
+                    "is_right": false
+                },
+                {
+                    "number": 4,
+                    "title": "1.800",
+                    "is_right": false
+                }
+            ]
+        },
+        
+        {
+            "title": "В каком году Юрий Гагарин совершил свой полёт?",
+            "level": 1,
+            "answers": [
+                {
+                    "number": 1,
+                    "title": "1961",
+                    "is_right": true
+                },
+                {
+                    "number": 2,
+                    "title": "1988",
+                    "is_right": false
+                },
+                {
+                    "number": 3,
+                    "title": "1986",
+                    "is_right": false
+                },
+                {
+                    "number": 4,
+                    "title": "1972",
+                    "is_right": false
+                }
+            ]
+        },
+        
+        {
+            "title": "Как называется спутник Земли?",
+            "level": 1,
+            "answers": [
+                {
+                    "number": 1,
+                    "title": "COVID19",
+                    "is_right": false
+                },
+                {
+                    "number": 2,
+                    "title": "Солнце",
+                    "is_right": false
+                },
+                {
+                    "number": 3,
+                    "title": "Звезда",
+                    "is_right": false
+                },
+                {
+                    "number": 4,
+                    "title": "Луна",
+                    "is_right": true
+                }
+            ]
+        }
+    ]

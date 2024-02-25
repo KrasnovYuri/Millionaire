@@ -1,0 +1,82 @@
+[
+    {
+        "title": "Какая столица Португалии?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Минск",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Рига",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Лиссабон",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Сыктыквар",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Конец Первой мировой войны",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "1918 г.",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "1917 г.",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "1945 г.",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Такой не было",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "На каких ножках стояла избушка Бабы Яги?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Свиных",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Металлических",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Фундаментных",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Куриных",
+                "is_right": true
+            }
+        ]
+    }
+]

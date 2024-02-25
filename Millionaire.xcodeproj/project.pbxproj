@@ -18,6 +18,8 @@
 		80266D252B8B6E8100DE05DC /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80266D242B8B6E8100DE05DC /* GameView.swift */; };
 		80266D272B8B6E8D00DE05DC /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80266D262B8B6E8D00DE05DC /* GameViewModel.swift */; };
 		80266D2C2B8B6FBF00DE05DC /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80266D2B2B8B6FBF00DE05DC /* Color+.swift */; };
+		80266D342B8B756300DE05DC /* Questions in Frameworks */ = {isa = PBXBuildFile; productRef = 80266D332B8B756300DE05DC /* Questions */; };
+		80266D362B8B756700DE05DC /* SoundManager in Frameworks */ = {isa = PBXBuildFile; productRef = 80266D352B8B756700DE05DC /* SoundManager */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		80266D242B8B6E8100DE05DC /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		80266D262B8B6E8D00DE05DC /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		80266D2B2B8B6FBF00DE05DC /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		80266D302B8B722D00DE05DC /* Questions */ = {isa = PBXFileReference; lastKnownFileType = text; name = Questions; path = Millionaire/Packages/Questions; sourceTree = SOURCE_ROOT; };
+		80266D312B8B726B00DE05DC /* SoundManager */ = {isa = PBXFileReference; lastKnownFileType = text; name = SoundManager; path = Millionaire/Packages/SoundManager; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80266D362B8B756700DE05DC /* SoundManager in Frameworks */,
+				80266D342B8B756300DE05DC /* Questions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +57,7 @@
 			children = (
 				80266CFB2B8B6C5E00DE05DC /* Millionaire */,
 				80266CFA2B8B6C5E00DE05DC /* Products */,
+				80266D322B8B756300DE05DC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +75,7 @@
 				80266D0A2B8B6CA300DE05DC /* App */,
 				80266D152B8B6D4300DE05DC /* Base */,
 				80266D0C2B8B6CAB00DE05DC /* Modules */,
+				80266D2F2B8B720900DE05DC /* Packages */,
 				80266D022B8B6C5F00DE05DC /* Preview Content */,
 			);
 			path = Millionaire;
@@ -216,6 +224,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		80266D2F2B8B720900DE05DC /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				80266D312B8B726B00DE05DC /* SoundManager */,
+				80266D302B8B722D00DE05DC /* Questions */,
+			);
+			name = Packages;
+			path = "Preview Content/Packages";
+			sourceTree = "<group>";
+		};
+		80266D322B8B756300DE05DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,6 +257,10 @@
 			dependencies = (
 			);
 			name = Millionaire;
+			packageProductDependencies = (
+				80266D332B8B756300DE05DC /* Questions */,
+				80266D352B8B756700DE05DC /* SoundManager */,
+			);
 			productName = Millionaire;
 			productReference = 80266CF92B8B6C5E00DE05DC /* Millionaire.app */;
 			productType = "com.apple.product-type.application";
@@ -500,6 +529,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		80266D332B8B756300DE05DC /* Questions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Questions;
+		};
+		80266D352B8B756700DE05DC /* SoundManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SoundManager;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 80266CF12B8B6C5E00DE05DC /* Project object */;
 }

@@ -10,3 +10,9 @@ public struct Answer: Codable {
         case isRight = "is_right"
     }
 }
+
+extension Answer: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(title)
+    }
+}

@@ -73,4 +73,11 @@ final class QuestionsTests: XCTestCase {
             XCTAssertTrue(notRight == notRightAnswersCount)
         })
     }
+    
+    func testAnswersIsNotEmpty() {
+        var allAnswers = allQuestions.flatMap({ $0.answers })
+        allAnswers.forEach({
+            XCTAssertFalse($0.title.isEmpty)
+        })
+    }
 }

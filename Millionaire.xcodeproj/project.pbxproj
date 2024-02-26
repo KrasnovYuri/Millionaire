@@ -20,6 +20,7 @@
 		80266D2C2B8B6FBF00DE05DC /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80266D2B2B8B6FBF00DE05DC /* Color+.swift */; };
 		80266D342B8B756300DE05DC /* Questions in Frameworks */ = {isa = PBXBuildFile; productRef = 80266D332B8B756300DE05DC /* Questions */; };
 		80266D362B8B756700DE05DC /* SoundManager in Frameworks */ = {isa = PBXBuildFile; productRef = 80266D352B8B756700DE05DC /* SoundManager */; };
+		80D1D87F2B8BB3E000057512 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		80266D2B2B8B6FBF00DE05DC /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		80266D302B8B722D00DE05DC /* Questions */ = {isa = PBXFileReference; lastKnownFileType = text; name = Questions; path = Millionaire/Packages/Questions; sourceTree = SOURCE_ROOT; };
 		80266D312B8B726B00DE05DC /* SoundManager */ = {isa = PBXFileReference; lastKnownFileType = text; name = SoundManager; path = Millionaire/Packages/SoundManager; sourceTree = SOURCE_ROOT; };
+		80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 		80266D152B8B6D4300DE05DC /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */,
 				80266D282B8B6F9700DE05DC /* Extensions */,
 			);
 			path = Base;
@@ -323,6 +326,7 @@
 				80266D272B8B6E8D00DE05DC /* GameViewModel.swift in Sources */,
 				80266D202B8B6E5600DE05DC /* ResultsView.swift in Sources */,
 				80266D1A2B8B6DF000DE05DC /* QuestionManager.swift in Sources */,
+				80D1D87F2B8BB3E000057512 /* GradientBackgroundView.swift in Sources */,
 				80266D252B8B6E8100DE05DC /* GameView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

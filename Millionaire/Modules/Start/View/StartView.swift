@@ -1,15 +1,26 @@
 import SwiftUI
 
 struct StartView: View {
+    @State private var isShowingLoginView = false
+    @State private var animationAmount = 0.0
+    
     var body: some View {
         ZStack {
             GradientBackgroundView()
             
             VStack {
                 Spacer()
-                Spacer()
                 
                 Image(.logoLarge)
+                    .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0))
+                    .onAppear {
+                        withAnimation {
+                            animationAmount += 360
+                        }
+                    }
+                    
+                Spacer()
+                
                 Text("Добро пожаловать в игру")
                     .font(.title)
                     .foregroundColor(.white)
@@ -33,9 +44,8 @@ struct StartView: View {
                     .background(.purple)
                     .cornerRadius(10)
                     
-                    
                     Button {
-                        print("Играть")
+                        isShowingLoginView = true
                     } label: {
                         Text("Играть")
                             .padding(10)
@@ -44,7 +54,12 @@ struct StartView: View {
                     .frame(width: 200)
                     .background(.purple)
                     .cornerRadius(10)
+                    .fullScreenCover(isPresented: $isShowingLoginView) {
+                        LoginView()
+                    }
+                    
                 }
+                Spacer()
                 Spacer()
             }
         }

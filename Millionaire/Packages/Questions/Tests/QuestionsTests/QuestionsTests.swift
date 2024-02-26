@@ -26,6 +26,10 @@ final class QuestionsTests: XCTestCase {
         }
     }
     
+    func testIsNotEmpty() {
+        XCTAssertFalse(lowQuestion.isEmpty || mediumQuestion.isEmpty || highQuestion.isEmpty)
+    }
+    
     func testLowQuestions() {
         lowQuestion.forEach({
             XCTAssertTrue($0.level == .low)

@@ -15,7 +15,7 @@ struct GameView: View {
                     .colorMultiply(Color.gray.opacity(0.8))
                 
                     HintButtonsView()
-                
+                    .padding(.top, 20)
                 HStack {
                     Text("Вопрос 1")
                         .foregroundColor(.white)
@@ -30,6 +30,7 @@ struct GameView: View {
                 }
                 .padding(.horizontal)
                 .frame(maxWidth: .infinity)
+                .padding(.top, 20)
                 
                 Text("О чём писал Грибоедов, отмечая, что он «нам сладок и приятен»")
                     .foregroundColor(.white)

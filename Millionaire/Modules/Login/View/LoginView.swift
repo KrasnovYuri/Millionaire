@@ -1,23 +1,23 @@
 import SwiftUI
 
-public struct PlaceholderStyle: ViewModifier {
+private struct PlaceholderStyle: ViewModifier {
     var showPlaceHolder: Bool
     var placeholder: String
 
-    public func body(content: Content) -> some View {
+    func body(content: Content) -> some View {
         ZStack(alignment: .leading) {
             if showPlaceHolder {
                 Text(placeholder)
             }
             content
             .foregroundColor(Color.white)
-//            .padding(5.0)
         }
     }
 }
 
 struct LoginView: View {
     @State private var nickname = ""
+    @State private var animationAmount = 0.0
     
     var body: some View {
         ZStack {
@@ -25,6 +25,14 @@ struct LoginView: View {
             
             VStack {
                 Image(.logoLarge)
+                    .rotation3DEffect(.degrees(animationAmount), axis: (x: 1, y: 0, z: 0))
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            withAnimation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 2)) {
+                                animationAmount += 360
+                            }
+                        }
+                    }
                 
                 Text("🔐 Регистрация")
                     .font(.title)
@@ -40,15 +48,8 @@ struct LoginView: View {
                     .keyboardType(.default)
                     .submitLabel(.done)
                 
-                Button {
+                ReusableButton(name: "Начать игру") {
                     print("Начать игру")
-                } label: {
-                    Text("Начать игру")
-                        .frame(maxWidth: .infinity)
-                        .padding(10)
-                        .background(.purple)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
                 }
                 Spacer()
             }

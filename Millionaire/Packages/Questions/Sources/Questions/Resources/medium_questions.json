@@ -1,82 +1,595 @@
-    [
-        {
-            "title": "Сколько вдохов делает человеческое тело ежедневно?",
-            "level": 1,
-            "answers": [
-                {
-                    "number": 1,
-                    "title": "Ни одного",
-                    "is_right": false
-                },
-                {
-                    "number": 2,
-                    "title": "20.000",
-                    "is_right": true
-                },
-                {
-                    "number": 3,
-                    "title": "320.000",
-                    "is_right": false
-                },
-                {
-                    "number": 4,
-                    "title": "1.800",
-                    "is_right": false
-                }
-            ]
-        },
-        
-        {
-            "title": "В каком году Юрий Гагарин совершил свой полёт?",
-            "level": 1,
-            "answers": [
-                {
-                    "number": 1,
-                    "title": "1961",
-                    "is_right": true
-                },
-                {
-                    "number": 2,
-                    "title": "1988",
-                    "is_right": false
-                },
-                {
-                    "number": 3,
-                    "title": "1986",
-                    "is_right": false
-                },
-                {
-                    "number": 4,
-                    "title": "1972",
-                    "is_right": false
-                }
-            ]
-        },
-        
-        {
-            "title": "Как называется спутник Земли?",
-            "level": 1,
-            "answers": [
-                {
-                    "number": 1,
-                    "title": "COVID19",
-                    "is_right": false
-                },
-                {
-                    "number": 2,
-                    "title": "Солнце",
-                    "is_right": false
-                },
-                {
-                    "number": 3,
-                    "title": "Звезда",
-                    "is_right": false
-                },
-                {
-                    "number": 4,
-                    "title": "Луна",
-                    "is_right": true
-                }
-            ]
-        }
-    ]
+[
+    {
+        "title": "Сколько вдохов делает человеческое тело ежедневно?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Ни одного",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "20.000",
+                "is_right": true
+            },
+            {
+                "number": 3,
+                "title": "320.000",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "1.800",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "В каком году Юрий Гагарин совершил свой полёт?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "1961",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "1988",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "1986",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "1972",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Как называется спутник Земли?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "COVID19",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Солнце",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Звезда",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Луна",
+                "is_right": true
+            }
+        ]
+    },
+    
+    {
+        "title": "В какое время года Земля бывает ближе к Солнцу?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Осенью",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Летом",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Зимой",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Весной",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "С помощью какой звезды находят стороны света?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Полярная",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Большая медведица",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Сириус",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Вега",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Как часто проводятся летние Олимпийские игры?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "1 раз в 2 года",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "2 раза в год",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "1 раз в 4 года",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Каждую неделю",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какая пустыня покрывает большую часть Северной Африки?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Сахара",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Калахари",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Чиуауа",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Карру",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какой треугольник имеет три неравные стороны",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Равносторонний",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Кривой",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Любой",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Неавносторонний",
+                "is_right": true
+            }
+        ]
+    },
+    
+    {
+        "title": "Какой фрукт содержит калий и помогает понижать кровяное давление?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Кокос",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Яблоко",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Банан",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Свекла",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какой фрукт вдохновил Ньютона на открытия закона всемирного тятотения?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Арбуз",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Яблоко",
+                "is_right": true
+            },
+            {
+                "number": 3,
+                "title": "Ананас",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Персик",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какая страна имеет 20 % мировых запасов пресной воды",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Канада",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Великобритания",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Италия",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Испания",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Что является национальным животным Шотландии?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Лошадь",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Единорог",
+                "is_right": true
+            },
+            {
+                "number": 3,
+                "title": "Волк",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Корова",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какая страна производит больше всего кофе в мире?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Колумбия",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Индонезия",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Бразилия",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Вьетнам",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Как называется колокол часов Вестминстерского дворца в Лондоне?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Биг Бен",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Броненосец",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Калабаш",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Мумия",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какой безалкогольный напиток первым был взят в космос?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Пепси",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Фанта",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Кока-Кола",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Снапл",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Как называется маленький пластмассовый кусочек на конце шнурка?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Строка",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Чехол",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Кружево",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Аглет",
+                "is_right": true
+            }
+        ]
+    },
+    
+    {
+        "title": "Сколько длится мгновение?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "60 секунд",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "90 секунд",
+                "is_right": true
+            },
+            {
+                "number": 3,
+                "title": "120 секунд",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "180 секунд",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какая служба электронной почты принадлежит компании Microsoft?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Outlook",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Yahoo Mail",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Gmail",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "iCloud Mail",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "В какой стране были проведены первые Олимпийские игры?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Италия",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Япония",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Греция",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Франция",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Как долго длилась Столетняя война?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "116 лет",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "100 лет",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "50 лет",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "101 год",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какое стихийное бедствие измеряется по шкале Рихтера?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Торнадо",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Землетрясения",
+                "is_right": true
+            },
+            {
+                "number": 3,
+                "title": "Наводнения",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Ураган",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какая планета находится ближе всего к Солнцу?",
+        "level": 1,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Земля",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Марс",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Меркурий",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Венера",
+                "is_right": false
+            }
+        ]
+    }
+]

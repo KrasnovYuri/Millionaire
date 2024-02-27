@@ -14,8 +14,10 @@ struct StartView: View {
                 Image(.logoLarge)
                     .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0))
                     .onAppear {
-                        withAnimation {
-                            animationAmount += 360
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            withAnimation(.timingCurve(0.2, 0.8, 0.2, 1, duration: 2)) {
+                                animationAmount += 360
+                            }
                         }
                     }
                     
@@ -54,6 +56,6 @@ struct StartView: View {
 }
 
 
-//#Preview {
-//    StartView()
-//}
+#Preview {
+    StartView()
+}

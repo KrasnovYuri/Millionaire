@@ -32,28 +32,15 @@ struct StartView: View {
                     .foregroundStyle(LinearGradient(colors: [.purple, .blue], startPoint: .leading, endPoint: .trailing))
                 
                 Spacer()
+                
                 VStack {
-                    Button {
+                    ReusableButton(name: "Правила игры") {
                         print("Правила игры")
-                    } label: {
-                        Text("Правила игры")
-                            .padding(10)
-                            .foregroundColor(Color.white)
                     }
-                    .frame(width: 200)
-                    .background(.purple)
-                    .cornerRadius(10)
                     
-                    Button {
+                    ReusableButton(name: "Играть") {
                         isShowingLoginView = true
-                    } label: {
-                        Text("Играть")
-                            .padding(10)
-                            .foregroundColor(Color.white)
                     }
-                    .frame(width: 200)
-                    .background(.purple)
-                    .cornerRadius(10)
                     .fullScreenCover(isPresented: $isShowingLoginView) {
                         LoginView()
                     }

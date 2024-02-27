@@ -53,6 +53,7 @@ struct StartView: View {
     }
 }
 
-#Preview {
-    StartView()
-}
+
+//#Preview {
+//    StartView()
+//}

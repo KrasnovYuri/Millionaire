@@ -23,6 +23,8 @@
 		80B127992B8D008300D9A239 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B127982B8D008300D9A239 /* Queue.swift */; };
 		80D1D87F2B8BB3E000057512 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */; };
 		927DE5B22B8DE2C00018602F /* ReusableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DE5B12B8DE2C00018602F /* ReusableButton.swift */; };
+		F9738D072B8CCA9000DF6A2C /* AnswerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9738D062B8CCA9000DF6A2C /* AnswerButtonView.swift */; };
+		F9738D092B8CCAE900DF6A2C /* HintButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9738D082B8CCAE900DF6A2C /* HintButtonsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		80B127982B8D008300D9A239 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 		927DE5B12B8DE2C00018602F /* ReusableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableButton.swift; sourceTree = "<group>"; };
+		F9738D062B8CCA9000DF6A2C /* AnswerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtonView.swift; sourceTree = "<group>"; };
+		F9738D082B8CCAE900DF6A2C /* HintButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintButtonsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,8 @@
 			children = (
 				80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */,
 				927DE5B12B8DE2C00018602F /* ReusableButton.swift */,
+				F9738D062B8CCA9000DF6A2C /* AnswerButtonView.swift */,
+				F9738D082B8CCAE900DF6A2C /* HintButtonsView.swift */,
 				80266D282B8B6F9700DE05DC /* Extensions */,
 			);
 			path = Base;
@@ -328,7 +334,9 @@
 				80266D2C2B8B6FBF00DE05DC /* Color+.swift in Sources */,
 				80266D1D2B8B6E4200DE05DC /* RulesView.swift in Sources */,
 				80B127992B8D008300D9A239 /* Queue.swift in Sources */,
+				F9738D072B8CCA9000DF6A2C /* AnswerButtonView.swift in Sources */,
 				80266CFD2B8B6C5E00DE05DC /* MillionaireApp.swift in Sources */,
+				F9738D092B8CCAE900DF6A2C /* HintButtonsView.swift in Sources */,
 				80266D172B8B6DB900DE05DC /* StartView.swift in Sources */,
 				80266D272B8B6E8D00DE05DC /* GameViewModel.swift in Sources */,
 				927DE5B22B8DE2C00018602F /* ReusableButton.swift in Sources */,
@@ -477,6 +485,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,6 +515,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

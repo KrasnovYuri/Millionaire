@@ -4,6 +4,8 @@ struct GameView: View {
     var body: some View {
         ZStack {
             GradientBackgroundView()
+                .edgesIgnoringSafeArea(.all)
+            
             VStack {
                 Image("logoLarge")
                     .resizable()
@@ -12,7 +14,7 @@ struct GameView: View {
                     .aspectRatio(contentMode: .fit)
                     .colorMultiply(Color.gray.opacity(0.8))
                 
-                HintButtonsView()
+                    HintButtonsView()
                 
                 HStack {
                     Text("Вопрос 1")
@@ -26,40 +28,47 @@ struct GameView: View {
                             .font(.system(size: 22, weight: .semibold))
                     }
                 }
-                .padding()
-                .padding(.top, 10)
+                .padding(.horizontal)
+                .frame(maxWidth: .infinity)
                 
                 Text("О чём писал Грибоедов, отмечая, что он «нам сладок и приятен»")
                     .foregroundColor(.white)
                     .font(.system(size: 16, weight: .regular))
-                    .frame(width: 328, height: 122)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 15)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .frame(height: 122)
                     .background(
                         RoundedRectangle(cornerRadius: 20)
                             .foregroundStyle(LinearGradient(colors: [.indigo, .black], startPoint: .topLeading, endPoint: .bottomTrailing))
                     )
-                    .padding(.top, 10)
+                    .padding([.horizontal, .top], 16)
+                    .padding(.bottom, 10)
                 
-                VStack(spacing: 18) {
-                    AnswerButtonView(label: "A.", text: "Дым Отечества") {
-                        // action
+                ScrollView(.vertical) {
+                    VStack(spacing: 18) {
+                        AnswerButtonView(label: "A.", text: "Дым Отечества") {
+                            // action
+                        }
+                        AnswerButtonView(label: "B.", text: "Дух купечества") {
+                            // action
+                        }
+                        AnswerButtonView(label: "C.", text: "Дар пророчества") {
+                            // action
+                        }
+                        AnswerButtonView(label: "D.", text: "Пыл девичества") {
+                            // action
+                        }
                     }
-                    AnswerButtonView(label: "B.", text: "Дух купечества") {
-                        // action
-                    }
-                    AnswerButtonView(label: "C.", text: "Дар пророчества") {
-                        // action
-                    }
-                    AnswerButtonView(label: "D.", text: "Пыл девичества") {
-                        // action
-                    }
+                    .padding(.top, 20)
                 }
-                .padding(.top, 30)
+                .padding(.horizontal)
             }
+            
         }
     }
 }
+
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {

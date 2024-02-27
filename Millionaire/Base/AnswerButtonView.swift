@@ -26,7 +26,8 @@ struct AnswerButtonView: View {
                 Spacer()
             }
             .font(.system(size: 22, weight: .regular))
-            .frame(width: 358, height: 60)
+            .frame(maxWidth: .infinity)
+            .frame(height: 60)
             .background(
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundStyle(LinearGradient(colors: [.indigo, .black], startPoint: .topLeading, endPoint: .bottomTrailing))

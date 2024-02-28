@@ -18,18 +18,19 @@ public struct PlaceholderStyle: ViewModifier {
 
 struct LoginView: View {
     @State private var nickname = ""
-    
+
     var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         ZStack {
             GradientBackgroundView()
-            
+
             VStack {
                 Image(.logoLarge)
-                
+
                 Text("🔐 Регистрация")
                     .font(.title)
                     .foregroundColor(.white)
-                
+
                 TextField("", text: $nickname)
                 .modifier(PlaceholderStyle(showPlaceHolder: nickname.isEmpty, placeholder: "Введите свой никнейм"))
                     .padding(10)
@@ -39,7 +40,7 @@ struct LoginView: View {
                     .padding(.vertical)
                     .keyboardType(.default)
                     .submitLabel(.done)
-                
+
                 Button {
                     print("Начать игру")
                 } label: {
@@ -60,6 +61,6 @@ struct LoginView: View {
     }
 }
 
-#Preview {
-    LoginView()
-}
+//#Preview {
+//    LoginView()
+//}

@@ -4,36 +4,33 @@
 import SwiftUI
 import AVFoundation
 
+public enum SoundType: String {
+    case correct = "correctAnswer"
+    case incorrect = "incorrectAnswer"
+    case pauseUntilResult
+    case win = "playerWin"
+    case timer = "timeOn"
+}
+
 public final class SoundManager {
     public static let shared = SoundManager()
     private var player: AVAudioPlayer?
     
     private init() {}
     
-    private enum SoundError: Error {
-        case notFound(name: String)
-        case dontPlaying(name: String)
+    public func play(filename: SoundType) {
+        let name = filename.rawValue
         
-        var localize: String {
-            switch self {
-            case .notFound(let name):
-                return "Аудиофайл \(name) не найден"
-            case .dontPlaying(let name):
-                return "Ошибка воспроизведения аудио: \(name)"
-            }
-        }
-    }
-    
-    public func play(filename: String) throws {
-        guard let data = NSDataAsset(name: filename, bundle: .module)?.data else {
-            throw SoundError.notFound(name: filename)
+        guard let data = NSDataAsset(name: name, bundle: .module)?.data else {
+            print("Аудиофайл \(filename) не найден")
+            return
         }
         
         do {
             player = try AVAudioPlayer(data: data)
             player?.play()
         } catch {
-            throw SoundError.dontPlaying(name: filename)
+            print("Невозможности воспроизвести аудиофайл \(name)")
         }
     }
     

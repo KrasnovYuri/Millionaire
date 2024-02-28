@@ -25,6 +25,7 @@
 		8059C3E02B8FC2B2002E3182 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80266D192B8B6DF000DE05DC /* QuestionManager.swift */; };
 		8059C3E12B8FC30B002E3182 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B127982B8D008300D9A239 /* Queue.swift */; };
 		8059C3E22B8FC30B002E3182 /* QueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8037AC962B8FB464006A96BD /* QueueProtocol.swift */; };
+		8059C3E72B8FDA0C002E3182 /* StatQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059C3E62B8FDA0C002E3182 /* StatQuestion.swift */; };
 		80B127992B8D008300D9A239 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B127982B8D008300D9A239 /* Queue.swift */; };
 		80D1D87F2B8BB3E000057512 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */; };
 		921BF03C2B8E339700792903 /* CurrentStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921BF03B2B8E339700792903 /* CurrentStats.swift */; };
@@ -62,6 +63,7 @@
 		8059C3D62B8FC16B002E3182 /* MillionaireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MillionaireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8059C3D82B8FC16B002E3182 /* MillionaireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillionaireTests.swift; sourceTree = "<group>"; };
 		8059C3DF2B8FC1F5002E3182 /* MillionaireTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MillionaireTests.xctestplan; sourceTree = "<group>"; };
+		8059C3E62B8FDA0C002E3182 /* StatQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatQuestion.swift; sourceTree = "<group>"; };
 		80B127982B8D008300D9A239 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 		921BF03B2B8E339700792903 /* CurrentStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStats.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		80266D0D2B8B6CB400DE05DC /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				8059C3E52B8FD9F7002E3182 /* Entity */,
 				80266D182B8B6DD900DE05DC /* Helpers */,
 				80266D132B8B6D3500DE05DC /* ViewModel */,
 				80266D122B8B6D3200DE05DC /* View */,
@@ -313,6 +316,14 @@
 			path = MillionaireTests;
 			sourceTree = "<group>";
 		};
+		8059C3E52B8FD9F7002E3182 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				8059C3E62B8FDA0C002E3182 /* StatQuestion.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		921BF03A2B8E337E00792903 /* CurrentStats */ = {
 			isa = PBXGroup;
 			children = (
@@ -441,6 +452,7 @@
 				80D1D87F2B8BB3E000057512 /* GradientBackgroundView.swift in Sources */,
 				80266D252B8B6E8100DE05DC /* GameView.swift in Sources */,
 				921BF03C2B8E339700792903 /* CurrentStats.swift in Sources */,
+				8059C3E72B8FDA0C002E3182 /* StatQuestion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

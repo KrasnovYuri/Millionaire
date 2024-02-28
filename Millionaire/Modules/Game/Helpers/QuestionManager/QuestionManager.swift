@@ -17,7 +17,7 @@ final class QuestionManager {
     }
 }
 
-// MARK: - Implementation
+// MARK: - Public
 
 extension QuestionManager: QuestionManagerProtocol {
     var questionCount: Int {
@@ -30,6 +30,8 @@ extension QuestionManager: QuestionManagerProtocol {
         return questions.dequeue()
     }
 }
+
+// MARK: - Implementation
 
 private extension QuestionManager {
     func obtainQuestions(offset: Int) -> Question? {

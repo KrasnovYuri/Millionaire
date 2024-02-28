@@ -65,6 +65,7 @@ struct GameView: View {
                 }
                 .padding(.horizontal)
             }
+            
         }
     }
 }

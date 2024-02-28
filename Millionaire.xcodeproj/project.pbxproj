@@ -20,6 +20,11 @@
 		80266D2C2B8B6FBF00DE05DC /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80266D2B2B8B6FBF00DE05DC /* Color+.swift */; };
 		80266D342B8B756300DE05DC /* Questions in Frameworks */ = {isa = PBXBuildFile; productRef = 80266D332B8B756300DE05DC /* Questions */; };
 		80266D362B8B756700DE05DC /* SoundManager in Frameworks */ = {isa = PBXBuildFile; productRef = 80266D352B8B756700DE05DC /* SoundManager */; };
+		8037AC972B8FB464006A96BD /* QueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8037AC962B8FB464006A96BD /* QueueProtocol.swift */; };
+		8059C3D92B8FC16B002E3182 /* MillionaireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059C3D82B8FC16B002E3182 /* MillionaireTests.swift */; };
+		8059C3E02B8FC2B2002E3182 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80266D192B8B6DF000DE05DC /* QuestionManager.swift */; };
+		8059C3E12B8FC30B002E3182 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B127982B8D008300D9A239 /* Queue.swift */; };
+		8059C3E22B8FC30B002E3182 /* QueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8037AC962B8FB464006A96BD /* QueueProtocol.swift */; };
 		80B127992B8D008300D9A239 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B127982B8D008300D9A239 /* Queue.swift */; };
 		80D1D87F2B8BB3E000057512 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */; };
 		921BF03C2B8E339700792903 /* CurrentStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921BF03B2B8E339700792903 /* CurrentStats.swift */; };
@@ -27,6 +32,16 @@
 		F9738D072B8CCA9000DF6A2C /* AnswerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9738D062B8CCA9000DF6A2C /* AnswerButtonView.swift */; };
 		F9738D092B8CCAE900DF6A2C /* HintButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9738D082B8CCAE900DF6A2C /* HintButtonsView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8059C3DA2B8FC16B002E3182 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80266CF12B8B6C5E00DE05DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80266CF82B8B6C5E00DE05DC;
+			remoteInfo = Millionaire;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		80266CF92B8B6C5E00DE05DC /* Millionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millionaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +58,10 @@
 		80266D2B2B8B6FBF00DE05DC /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		80266D302B8B722D00DE05DC /* Questions */ = {isa = PBXFileReference; lastKnownFileType = text; name = Questions; path = Millionaire/Packages/Questions; sourceTree = SOURCE_ROOT; };
 		80266D312B8B726B00DE05DC /* SoundManager */ = {isa = PBXFileReference; lastKnownFileType = text; name = SoundManager; path = Millionaire/Packages/SoundManager; sourceTree = SOURCE_ROOT; };
+		8037AC962B8FB464006A96BD /* QueueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueProtocol.swift; sourceTree = "<group>"; };
+		8059C3D62B8FC16B002E3182 /* MillionaireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MillionaireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8059C3D82B8FC16B002E3182 /* MillionaireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillionaireTests.swift; sourceTree = "<group>"; };
+		8059C3DF2B8FC1F5002E3182 /* MillionaireTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = MillionaireTests.xctestplan; sourceTree = "<group>"; };
 		80B127982B8D008300D9A239 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 		921BF03B2B8E339700792903 /* CurrentStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStats.swift; sourceTree = "<group>"; };
@@ -61,13 +80,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8059C3D32B8FC16B002E3182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		80266CF02B8B6C5E00DE05DC = {
 			isa = PBXGroup;
 			children = (
+				8059C3DF2B8FC1F5002E3182 /* MillionaireTests.xctestplan */,
 				80266CFB2B8B6C5E00DE05DC /* Millionaire */,
+				8059C3D72B8FC16B002E3182 /* MillionaireTests */,
 				80266CFA2B8B6C5E00DE05DC /* Products */,
 				80266D322B8B756300DE05DC /* Frameworks */,
 			);
@@ -77,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				80266CF92B8B6C5E00DE05DC /* Millionaire.app */,
+				8059C3D62B8FC16B002E3182 /* MillionaireTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,8 +233,8 @@
 		80266D182B8B6DD900DE05DC /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				80266D192B8B6DF000DE05DC /* QuestionManager.swift */,
-				80B127982B8D008300D9A239 /* Queue.swift */,
+				8037AC952B8FB44B006A96BD /* QuestionManager */,
+				8037AC942B8FB43F006A96BD /* Queue */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -259,6 +288,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8037AC942B8FB43F006A96BD /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				80B127982B8D008300D9A239 /* Queue.swift */,
+				8037AC962B8FB464006A96BD /* QueueProtocol.swift */,
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
+		8037AC952B8FB44B006A96BD /* QuestionManager */ = {
+			isa = PBXGroup;
+			children = (
+				80266D192B8B6DF000DE05DC /* QuestionManager.swift */,
+			);
+			path = QuestionManager;
+			sourceTree = "<group>";
+		};
+		8059C3D72B8FC16B002E3182 /* MillionaireTests */ = {
+			isa = PBXGroup;
+			children = (
+				8059C3D82B8FC16B002E3182 /* MillionaireTests.swift */,
+			);
+			path = MillionaireTests;
+			sourceTree = "<group>";
+		};
 		921BF03A2B8E337E00792903 /* CurrentStats */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +345,24 @@
 			productReference = 80266CF92B8B6C5E00DE05DC /* Millionaire.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8059C3D52B8FC16B002E3182 /* MillionaireTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8059C3DC2B8FC16B002E3182 /* Build configuration list for PBXNativeTarget "MillionaireTests" */;
+			buildPhases = (
+				8059C3D22B8FC16B002E3182 /* Sources */,
+				8059C3D32B8FC16B002E3182 /* Frameworks */,
+				8059C3D42B8FC16B002E3182 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8059C3DB2B8FC16B002E3182 /* PBXTargetDependency */,
+			);
+			name = MillionaireTests;
+			productName = MillionaireTests;
+			productReference = 8059C3D62B8FC16B002E3182 /* MillionaireTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -303,6 +375,10 @@
 				TargetAttributes = {
 					80266CF82B8B6C5E00DE05DC = {
 						CreatedOnToolsVersion = 15.1;
+					};
+					8059C3D52B8FC16B002E3182 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 80266CF82B8B6C5E00DE05DC;
 					};
 				};
 			};
@@ -320,6 +396,7 @@
 			projectRoot = "";
 			targets = (
 				80266CF82B8B6C5E00DE05DC /* Millionaire */,
+				8059C3D52B8FC16B002E3182 /* MillionaireTests */,
 			);
 		};
 /* End PBXProject section */
@@ -331,6 +408,13 @@
 			files = (
 				80266D042B8B6C5F00DE05DC /* Preview Assets.xcassets in Resources */,
 				80266D012B8B6C5F00DE05DC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8059C3D42B8FC16B002E3182 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +430,7 @@
 				80266D1D2B8B6E4200DE05DC /* RulesView.swift in Sources */,
 				80B127992B8D008300D9A239 /* Queue.swift in Sources */,
 				F9738D072B8CCA9000DF6A2C /* AnswerButtonView.swift in Sources */,
+				8037AC972B8FB464006A96BD /* QueueProtocol.swift in Sources */,
 				80266CFD2B8B6C5E00DE05DC /* MillionaireApp.swift in Sources */,
 				F9738D092B8CCAE900DF6A2C /* HintButtonsView.swift in Sources */,
 				80266D172B8B6DB900DE05DC /* StartView.swift in Sources */,
@@ -359,7 +444,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8059C3D22B8FC16B002E3182 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8059C3E12B8FC30B002E3182 /* Queue.swift in Sources */,
+				8059C3E22B8FC30B002E3182 /* QueueProtocol.swift in Sources */,
+				8059C3E02B8FC2B2002E3182 /* QuestionManager.swift in Sources */,
+				8059C3D92B8FC16B002E3182 /* MillionaireTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8059C3DB2B8FC16B002E3182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80266CF82B8B6C5E00DE05DC /* Millionaire */;
+			targetProxy = 8059C3DA2B8FC16B002E3182 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		80266D052B8B6C5F00DE05DC /* Debug */ = {
@@ -541,6 +645,50 @@
 			};
 			name = Release;
 		};
+		8059C3DD2B8FC16B002E3182 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X6QCC36TXK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.koko6a.Millionaire.MillionaireTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Millionaire.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Millionaire";
+			};
+			name = Debug;
+		};
+		8059C3DE2B8FC16B002E3182 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X6QCC36TXK;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.koko6a.Millionaire.MillionaireTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Millionaire.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Millionaire";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -558,6 +706,15 @@
 			buildConfigurations = (
 				80266D082B8B6C5F00DE05DC /* Debug */,
 				80266D092B8B6C5F00DE05DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8059C3DC2B8FC16B002E3182 /* Build configuration list for PBXNativeTarget "MillionaireTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8059C3DD2B8FC16B002E3182 /* Debug */,
+				8059C3DE2B8FC16B002E3182 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

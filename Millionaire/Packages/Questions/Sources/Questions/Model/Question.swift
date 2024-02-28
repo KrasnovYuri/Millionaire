@@ -2,7 +2,7 @@ import Foundation
 
 public struct Question: Codable {
     let title: String
-    let level: QuestionLevel
+    public let level: QuestionLevel
     let answers: [Answer]
 }
 

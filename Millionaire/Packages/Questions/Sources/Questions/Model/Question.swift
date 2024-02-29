@@ -1,9 +1,9 @@
 import Foundation
 
 public struct Question: Codable {
-    let title: String
+    public let title: String
     public let level: QuestionLevel
-    let answers: [Answer]
+    public let answers: [Answer]
 }
 
 extension Question: Equatable {

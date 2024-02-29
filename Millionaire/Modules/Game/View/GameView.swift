@@ -1,29 +1,32 @@
 import SwiftUI
+import Questions
 
 struct GameView: View {
+    @ObservedObject private var viewModel = GameViewModel()
+    let username: String
+    
     var body: some View {
         ZStack {
             GradientBackgroundView()
-                .edgesIgnoringSafeArea(.all)
-            
             VStack {
-                Image("logoLarge")
+                Image(.logoLarge)
                     .resizable()
                     .frame(width: 153, height: 158)
                     .scaledToFit()
                     .aspectRatio(contentMode: .fit)
                     .colorMultiply(Color.gray.opacity(0.8))
                 
-                    HintButtonsView()
+                HintButtonsView()
                     .padding(.top, 20)
+                
                 HStack {
-                    Text("Вопрос 1")
+                    Text("Вопрос \(viewModel.currentStat.rawValue)")
                         .foregroundColor(.white)
                         .font(.system(size: 28, weight: .semibold))
                     Spacer()
                     HStack {
-                        Image("cash")
-                        Text("500₽")
+                        Image(.cash)
+                        Text("\(viewModel.currentStat.price) ₽")
                             .foregroundColor(.white)
                             .font(.system(size: 22, weight: .semibold))
                     }
@@ -31,49 +34,38 @@ struct GameView: View {
                 .padding(.horizontal)
                 .frame(maxWidth: .infinity)
                 .padding(.top, 20)
-                
-                Text("О чём писал Грибоедов, отмечая, что он «нам сладок и приятен»")
-                    .foregroundColor(.white)
-                    .font(.system(size: 16, weight: .regular))
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 15)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .frame(height: 122)
-                    .background(
-                        RoundedRectangle(cornerRadius: 20)
-                            .foregroundStyle(LinearGradient(colors: [.indigo, .black], startPoint: .topLeading, endPoint: .bottomTrailing))
-                    )
-                    .padding([.horizontal, .top], 16)
-                    .padding(.bottom, 10)
-                
-                ScrollView(.vertical) {
-                    VStack(spacing: 18) {
-                        AnswerButtonView(label: "A.", text: "Дым Отечества") {
-                            // action
-                        }
-                        AnswerButtonView(label: "B.", text: "Дух купечества") {
-                            // action
-                        }
-                        AnswerButtonView(label: "C.", text: "Дар пророчества") {
-                            // action
-                        }
-                        AnswerButtonView(label: "D.", text: "Пыл девичества") {
-                            // action
+                    QuestionView(title: viewModel.currentQuestion?.title ?? "")
+                        .padding(.top, 16)
+                        .padding(.bottom, 10)
+                    
+                    if let answers = viewModel.currentQuestion?.answers {
+                        var labels = ["A: ", "B: ", "C: ", "D: "]
+                        
+                        ForEach(Array(zip(answers.indices, answers)), id: \.0) { index, item in
+                            VStack(spacing: 18) {
+                                AnswerButtonView(label: labels[index], text: item.title, action: {
+                                    answerQuestion(isRight: item.isRight)
+                                })
+                            }
                         }
                     }
-                    .padding(.top, 20)
-                }
-                .padding(.horizontal)
             }
-            
+        }.onAppear{
+            viewModel.startNewGame()
         }
+    }
+}
+
+private extension GameView {
+    func answerQuestion(isRight: Bool) {
+        viewModel.newQuestion()
     }
 }
 
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        GameView(username: "sdaDas")
     }
 }
 

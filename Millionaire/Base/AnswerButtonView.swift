@@ -30,7 +30,10 @@ struct AnswerButtonView: View {
             .frame(height: 60)
             .background(
                 RoundedRectangle(cornerRadius: 10)
-                    .foregroundStyle(LinearGradient(colors: [.indigo, .black], startPoint: .topLeading, endPoint: .bottomTrailing))
+                    .foregroundStyle(LinearGradient(
+                        colors: [Color(hex: 0x14144C), Color(hex: 0x2D1158)],
+                        startPoint: .topLeading, endPoint: .bottomTrailing)
+                    )
             )
         }
     }

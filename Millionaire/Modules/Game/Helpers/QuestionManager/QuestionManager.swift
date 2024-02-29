@@ -3,7 +3,7 @@ import Questions
 
 protocol QuestionManagerProtocol {
     var questionCount: Int { get }
-    func fetchNewQuestion(current question: Int) -> Question?
+    func fetchNewQuestion(current stat: StatQuestion) -> Question?
 }
 
 final class QuestionManager {
@@ -24,9 +24,9 @@ extension QuestionManager: QuestionManagerProtocol {
         questions.count
     }
     
-    func fetchNewQuestion(current question: Int) -> Question? {
-        guard question < maxLimitOffset else { return nil }
-        guard !questions.isEmpty else { return obtainQuestions(offset: question) }
+    func fetchNewQuestion(current stat: StatQuestion) -> Question? {
+        guard stat.rawValue < maxLimitOffset else { return nil }
+        guard !questions.isEmpty else { return obtainQuestions(stat: stat) }
         return questions.dequeue()
     }
 }
@@ -34,26 +34,12 @@ extension QuestionManager: QuestionManagerProtocol {
 // MARK: - Implementation
 
 private extension QuestionManager {
-    func obtainQuestions(offset: Int) -> Question? {
-        let level = obtainLevel(offset)
-        questionStorage.fetchQuestion(for: level) { [weak self] questions in
+    func obtainQuestions(stat: StatQuestion) -> Question? {
+        questionStorage.fetchQuestion(for: stat.level) { [weak self] questions in
             guard let `self`, questions.count > maxCountQuestionsInLevel else { return }
             let firstFiveQuestions = Array(questions.prefix(maxCountQuestionsInLevel))
             firstFiveQuestions.forEach { self.questions.enqueue($0) }
         }
         return self.questions.dequeue()
-    }
-    
-    func obtainLevel(_ offset: Int) -> QuestionLevel {
-        switch offset {
-        case 0...4:
-            return .low
-        case 5...9:
-            return .medium
-        case 10...14:
-            return .high
-        default:
-            return .low
-        }
     }
 }

@@ -24,7 +24,7 @@ final class MillionaireTests: XCTestCase {
     }
     
     func testStartGameQuestionExist() {
-        let first = questionManager.fetchNewQuestion(current: currentOffset)
+        _ = questionManager.fetchNewQuestion(current: currentOffset)
         currentOffset += 1
         XCTAssertEqual(questionManager.questionCount, 4)
     }
@@ -68,7 +68,7 @@ final class MillionaireTests: XCTestCase {
 private extension MillionaireTests {
     func passQuestions(number: Int) {
         for _ in 0..<number {
-            let question = questionManager.fetchNewQuestion(current: currentOffset)
+            _ = questionManager.fetchNewQuestion(current: currentOffset)
             currentOffset += 1
         }
     }

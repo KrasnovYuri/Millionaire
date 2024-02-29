@@ -20,6 +20,7 @@
 		80266D2C2B8B6FBF00DE05DC /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80266D2B2B8B6FBF00DE05DC /* Color+.swift */; };
 		80266D342B8B756300DE05DC /* Questions in Frameworks */ = {isa = PBXBuildFile; productRef = 80266D332B8B756300DE05DC /* Questions */; };
 		80266D362B8B756700DE05DC /* SoundManager in Frameworks */ = {isa = PBXBuildFile; productRef = 80266D352B8B756700DE05DC /* SoundManager */; };
+		80358BCA2B9120C100F83617 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80358BC92B9120C000F83617 /* QuestionView.swift */; };
 		8037AC972B8FB464006A96BD /* QueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8037AC962B8FB464006A96BD /* QueueProtocol.swift */; };
 		8059C3D92B8FC16B002E3182 /* MillionaireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059C3D82B8FC16B002E3182 /* MillionaireTests.swift */; };
 		8059C3E02B8FC2B2002E3182 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80266D192B8B6DF000DE05DC /* QuestionManager.swift */; };
@@ -29,7 +30,7 @@
 		80B127992B8D008300D9A239 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B127982B8D008300D9A239 /* Queue.swift */; };
 		80D1D87F2B8BB3E000057512 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */; };
 		921BF03C2B8E339700792903 /* CurrentStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921BF03B2B8E339700792903 /* CurrentStats.swift */; };
-		927DE5B22B8DE2C00018602F /* ReusableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DE5B12B8DE2C00018602F /* ReusableButton.swift */; };
+		927DE5B22B8DE2C00018602F /* DestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DE5B12B8DE2C00018602F /* DestinationView.swift */; };
 		F9738D072B8CCA9000DF6A2C /* AnswerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9738D062B8CCA9000DF6A2C /* AnswerButtonView.swift */; };
 		F9738D092B8CCAE900DF6A2C /* HintButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9738D082B8CCAE900DF6A2C /* HintButtonsView.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		80266D2B2B8B6FBF00DE05DC /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		80266D302B8B722D00DE05DC /* Questions */ = {isa = PBXFileReference; lastKnownFileType = text; name = Questions; path = Millionaire/Packages/Questions; sourceTree = SOURCE_ROOT; };
 		80266D312B8B726B00DE05DC /* SoundManager */ = {isa = PBXFileReference; lastKnownFileType = text; name = SoundManager; path = Millionaire/Packages/SoundManager; sourceTree = SOURCE_ROOT; };
+		80358BC92B9120C000F83617 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		8037AC962B8FB464006A96BD /* QueueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueProtocol.swift; sourceTree = "<group>"; };
 		8059C3D62B8FC16B002E3182 /* MillionaireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MillionaireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8059C3D82B8FC16B002E3182 /* MillionaireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillionaireTests.swift; sourceTree = "<group>"; };
@@ -67,7 +69,7 @@
 		80B127982B8D008300D9A239 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
 		921BF03B2B8E339700792903 /* CurrentStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStats.swift; sourceTree = "<group>"; };
-		927DE5B12B8DE2C00018602F /* ReusableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableButton.swift; sourceTree = "<group>"; };
+		927DE5B12B8DE2C00018602F /* DestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationView.swift; sourceTree = "<group>"; };
 		F9738D062B8CCA9000DF6A2C /* AnswerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtonView.swift; sourceTree = "<group>"; };
 		F9738D082B8CCAE900DF6A2C /* HintButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintButtonsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -208,6 +210,7 @@
 		80266D122B8B6D3200DE05DC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				80358BC82B9120B200F83617 /* Views */,
 				80266D242B8B6E8100DE05DC /* GameView.swift */,
 			);
 			path = View;
@@ -225,7 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */,
-				927DE5B12B8DE2C00018602F /* ReusableButton.swift */,
+				927DE5B12B8DE2C00018602F /* DestinationView.swift */,
 				F9738D062B8CCA9000DF6A2C /* AnswerButtonView.swift */,
 				F9738D082B8CCAE900DF6A2C /* HintButtonsView.swift */,
 				80266D282B8B6F9700DE05DC /* Extensions */,
@@ -289,6 +292,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80358BC82B9120B200F83617 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				80358BC92B9120C000F83617 /* QuestionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		8037AC942B8FB43F006A96BD /* Queue */ = {
@@ -446,12 +457,13 @@
 				F9738D092B8CCAE900DF6A2C /* HintButtonsView.swift in Sources */,
 				80266D172B8B6DB900DE05DC /* StartView.swift in Sources */,
 				80266D272B8B6E8D00DE05DC /* GameViewModel.swift in Sources */,
-				927DE5B22B8DE2C00018602F /* ReusableButton.swift in Sources */,
+				927DE5B22B8DE2C00018602F /* DestinationView.swift in Sources */,
 				80266D202B8B6E5600DE05DC /* ResultsView.swift in Sources */,
 				80266D1A2B8B6DF000DE05DC /* QuestionManager.swift in Sources */,
 				80D1D87F2B8BB3E000057512 /* GradientBackgroundView.swift in Sources */,
 				80266D252B8B6E8100DE05DC /* GameView.swift in Sources */,
 				921BF03C2B8E339700792903 /* CurrentStats.swift in Sources */,
+				80358BCA2B9120C100F83617 /* QuestionView.swift in Sources */,
 				8059C3E72B8FDA0C002E3182 /* StatQuestion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

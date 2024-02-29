@@ -1,9 +1,9 @@
 import Foundation
 
 public struct Answer: Codable {
-    let number: Int
-    let title: String
-    let isRight: Bool
+    public let number: Int
+    public let title: String
+    public let isRight: Bool
     
     enum CodingKeys: String, CodingKey {
         case number, title

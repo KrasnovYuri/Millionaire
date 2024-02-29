@@ -55,10 +55,10 @@ struct QuestionRow: View {
 }
 
 struct CurrentStats: View {
-    @State private var fiftyFiftyButtonPressed = false
-    @State private var helpAudienceButtonPressed = false
-    @State private var callFriendButtonPressed = false
-    @State private var buttonPressed = false
+    @State var fiftyFiftyButtonPressed = false
+    @State var helpAudienceButtonPressed = false
+    @State var callFriendButtonPressed = false
+    @State var buttonPressed = false
     
     var body: some View {
         ZStack {
@@ -97,24 +97,13 @@ struct CurrentStats: View {
                 
                 ScrollView {
                     LazyVStack(spacing: 7) {
-                        QuestionRow(questionNumber: 15, cost: 1000000, colorType: .fireproofAmountColor)
-                        QuestionRow(questionNumber: 14, cost: 500000, colorType: .standardColor)
-                        QuestionRow(questionNumber: 13, cost: 250000, colorType: .standardColor)
-                        QuestionRow(questionNumber: 12, cost: 125000, colorType: .standardColor)
-                        QuestionRow(questionNumber: 11, cost: 64000, colorType: .standardColor)
-                        QuestionRow(questionNumber: 10, cost: 32000, colorType: .fireproofAmountColor)
-                        QuestionRow(questionNumber: 9, cost: 16000, colorType: .standardColor)
-                        QuestionRow(questionNumber: 8, cost: 8000, colorType: .standardColor)
-                        QuestionRow(questionNumber: 7, cost: 4000, colorType: .standardColor)
-                        QuestionRow(questionNumber: 6, cost: 2000, colorType: .standardColor)
-                        QuestionRow(questionNumber: 5, cost: 1000, colorType: .fireproofAmountColor)
-                        QuestionRow(questionNumber: 4, cost: 500, colorType: .standardColor)
-                        QuestionRow(questionNumber: 3, cost: 300, colorType: .standardColor)
-                        QuestionRow(questionNumber: 2, cost: 200, colorType: .standardColor)
-                        QuestionRow(questionNumber: 1, cost: 100, colorType: .standardColor)
+                        ForEach(StatQuestion.allCases.reversed(), id: \.price) { stat in
+                            QuestionRow(questionNumber: stat.rawValue, cost: Int(stat.price), colorType: stat.isFireproof ? .fireproofAmountColor : .standardColor)
+                        }
                     }
-                    .padding()
                 }
+                .padding()
+                
                 HStack(spacing: 180){
                     Button(action: {
                         

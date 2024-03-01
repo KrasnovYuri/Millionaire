@@ -17,7 +17,7 @@ private struct PlaceholderStyle: ViewModifier {
 
 struct LoginView: View {
     @State private var isStartGame = false
-    @State private var nickname = ""
+    @State var nickname = ""
     @State private var animationAmount = 0.0
 
     var body: some View {
@@ -63,7 +63,9 @@ struct LoginView: View {
                     Spacer()
                 }
                 .onSubmit {
-                    print("Начать игру")
+                    if !nickname.isEmpty {
+                        isStartGame = true
+                    }
                 }
                 .padding()
             }

@@ -46,7 +46,7 @@ struct QuestionRow: View {
             )
         case .answerColor:
             return LinearGradient(
-                gradient: Gradient(colors: [Color(hex: 0x184925), Color(hex: 0x19332A)]),
+                gradient: Gradient(colors: [Color(hex: 0x089D2F), Color(hex: 0x19332A)]),
                 startPoint: .leading,
                 endPoint: .trailing
             )
@@ -98,7 +98,11 @@ struct CurrentStats: View {
                 ScrollView {
                     LazyVStack(spacing: 7) {
                         ForEach(StatQuestion.allCases.reversed(), id: \.price) { stat in
-                            QuestionRow(questionNumber: stat.rawValue, cost: Int(stat.price), colorType: stat.isFireproof ? .fireproofAmountColor : .standardColor)
+                            if stat.rawValue != GameViewModel().currentStat.rawValue {
+                                QuestionRow(questionNumber: stat.rawValue, cost: Int(stat.price), colorType: stat.isFireproof ? .fireproofAmountColor : .standardColor)
+                            } else {
+                                QuestionRow(questionNumber: stat.rawValue, cost: Int(stat.price), colorType: .answerColor)
+                            }
                         }
                     }
                 }

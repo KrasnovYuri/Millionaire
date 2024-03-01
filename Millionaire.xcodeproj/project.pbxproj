@@ -29,6 +29,9 @@
 		8059C3E72B8FDA0C002E3182 /* StatQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059C3E62B8FDA0C002E3182 /* StatQuestion.swift */; };
 		80B127992B8D008300D9A239 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B127982B8D008300D9A239 /* Queue.swift */; };
 		80D1D87F2B8BB3E000057512 /* GradientBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */; };
+		920628762B9272E100774003 /* SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920628752B9272E100774003 /* SaveData.swift */; };
+		920628782B92730D00774003 /* ScorePoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920628772B92730D00774003 /* ScorePoints.swift */; };
+		9206287A2B92733800774003 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920628792B92733800774003 /* ScoreView.swift */; };
 		921BF03C2B8E339700792903 /* CurrentStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921BF03B2B8E339700792903 /* CurrentStats.swift */; };
 		927DE5B22B8DE2C00018602F /* DestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927DE5B12B8DE2C00018602F /* DestinationView.swift */; };
 		F9738D072B8CCA9000DF6A2C /* AnswerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9738D062B8CCA9000DF6A2C /* AnswerButtonView.swift */; };
@@ -68,6 +71,9 @@
 		8059C3E62B8FDA0C002E3182 /* StatQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatQuestion.swift; sourceTree = "<group>"; };
 		80B127982B8D008300D9A239 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		80D1D87E2B8BB3E000057512 /* GradientBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackgroundView.swift; sourceTree = "<group>"; };
+		920628752B9272E100774003 /* SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveData.swift; sourceTree = "<group>"; };
+		920628772B92730D00774003 /* ScorePoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScorePoints.swift; sourceTree = "<group>"; };
+		920628792B92733800774003 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		921BF03B2B8E339700792903 /* CurrentStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStats.swift; sourceTree = "<group>"; };
 		927DE5B12B8DE2C00018602F /* DestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationView.swift; sourceTree = "<group>"; };
 		F9738D062B8CCA9000DF6A2C /* AnswerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtonView.swift; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 		80266D0C2B8B6CAB00DE05DC /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				920628722B9272B400774003 /* Score */,
 				921BF03A2B8E337E00792903 /* CurrentStats */,
 				80266D0B2B8B6CA700DE05DC /* Start */,
 				80266D102B8B6D0600DE05DC /* Login */,
@@ -335,6 +342,32 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		920628722B9272B400774003 /* Score */ = {
+			isa = PBXGroup;
+			children = (
+				920628742B9272CC00774003 /* View */,
+				920628732B9272C200774003 /* Extensions */,
+				920628772B92730D00774003 /* ScorePoints.swift */,
+			);
+			path = Score;
+			sourceTree = "<group>";
+		};
+		920628732B9272C200774003 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				920628752B9272E100774003 /* SaveData.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		920628742B9272CC00774003 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				920628792B92733800774003 /* ScoreView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		921BF03A2B8E337E00792903 /* CurrentStats */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,17 +485,20 @@
 				80266D1D2B8B6E4200DE05DC /* RulesView.swift in Sources */,
 				80B127992B8D008300D9A239 /* Queue.swift in Sources */,
 				F9738D072B8CCA9000DF6A2C /* AnswerButtonView.swift in Sources */,
+				920628782B92730D00774003 /* ScorePoints.swift in Sources */,
 				8037AC972B8FB464006A96BD /* QueueProtocol.swift in Sources */,
 				80266CFD2B8B6C5E00DE05DC /* MillionaireApp.swift in Sources */,
 				F9738D092B8CCAE900DF6A2C /* HintButtonsView.swift in Sources */,
 				80266D172B8B6DB900DE05DC /* StartView.swift in Sources */,
 				80266D272B8B6E8D00DE05DC /* GameViewModel.swift in Sources */,
+				9206287A2B92733800774003 /* ScoreView.swift in Sources */,
 				927DE5B22B8DE2C00018602F /* DestinationView.swift in Sources */,
 				80266D202B8B6E5600DE05DC /* ResultView.swift in Sources */,
 				80266D1A2B8B6DF000DE05DC /* QuestionManager.swift in Sources */,
 				80D1D87F2B8BB3E000057512 /* GradientBackgroundView.swift in Sources */,
 				80266D252B8B6E8100DE05DC /* GameView.swift in Sources */,
 				921BF03C2B8E339700792903 /* CurrentStats.swift in Sources */,
+				920628762B9272E100774003 /* SaveData.swift in Sources */,
 				80358BCA2B9120C100F83617 /* QuestionView.swift in Sources */,
 				8059C3E72B8FDA0C002E3182 /* StatQuestion.swift in Sources */,
 			);

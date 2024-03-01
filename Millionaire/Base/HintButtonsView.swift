@@ -9,6 +9,7 @@ import SwiftUI
 
 // MARK - Buttons hints
 struct HintButtonsView: View {
+    @ObservedObject var viewModel: GameViewModel
     @State private var showIcon1 = true
     @State private var showIcon2 = true
     @State private var showIcon3 = true
@@ -41,7 +42,13 @@ struct HintButtonsView: View {
             }
 
             Spacer()
-            TimerView()
+            
+            Text("⏱️ \(viewModel.currentTime)")
+                .foregroundStyle(viewModel.currentTime < 10 ? .red : .white)
+                .font(.system(size: 28, weight: .semibold))
+                .border(.green)
+                .clipShape(.rect(cornerRadius: 4, style: .circular))
+            
             Spacer()
 
             Button(action: {
@@ -73,13 +80,6 @@ struct HintButtonsView: View {
     }
 }
 
-struct TimerView: View {
-    var body: some View {
-        VStack {
-            Image("timer")
-                .renderingMode(.original)
-                .foregroundColor(.white)
-                .font(.system(size: 12))
-        }
-    }
+#Preview {
+    HintButtonsView(viewModel: GameViewModel())
 }

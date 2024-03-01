@@ -46,7 +46,7 @@ struct QuestionRow: View {
             )
         case .answerColor:
             return LinearGradient(
-                gradient: Gradient(colors: [Color(hex: 0x184925), Color(hex: 0x19332A)]),
+                gradient: Gradient(colors: [Color(hex: 0x089D2F), Color(hex: 0x19332A)]),
                 startPoint: .leading,
                 endPoint: .trailing
             )

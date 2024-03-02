@@ -1,71 +1,47 @@
 import SwiftUI
+import SoundManager
 import Questions
 
+//Максим
+//Сделать задержку после ответа и моргание кнопки ответа на неск сек + заменить музыку
+//После "проверки" подсветить кнопку красным/зеленым и перейти на экран статистики подсветим ответ
+//Спустя несколько секунд вернуться назад и продолжить игру
+//Логику подсказок реализовать
+//Анимация кнопок при ответе (влево, вправо) пример видео в дискорд
+
 struct GameView: View {
+    @State private var showingStats = false
+    @State private var opacity = 0.0
     @ObservedObject private var viewModel = GameViewModel()
     let username: String
     
     var body: some View {
-        ZStack {
-            GradientBackgroundView()
-            VStack {
-                Image(.logoLarge)
-                    .resizable()
-                    .frame(width: 153, height: 158)
-                    .scaledToFit()
-                    .aspectRatio(contentMode: .fit)
-                    .colorMultiply(Color.gray.opacity(0.8))
-                
-                HintButtonsView()
-                    .padding(.top, 20)
-                
-                HStack {
-                    Text("Вопрос \(viewModel.currentStat.rawValue)")
-                        .foregroundColor(.white)
-                        .font(.system(size: 28, weight: .semibold))
-                    Spacer()
-                    HStack {
-                        Image(.cash)
-                        Text("\(viewModel.currentStat.price) ₽")
-                            .foregroundColor(.white)
-                            .font(.system(size: 22, weight: .semibold))
-                    }
+        if !viewModel.isLoser {
+            MainGameView(viewModel: viewModel, didAnswer: { isRight in
+                answerQuestion(isRight: isRight)
+            })
+            .disabled(viewModel.isWaiting)
+            .opacity(opacity)
+            .onAppear{
+                viewModel.startNewGame()
+                withAnimation(.easeInOut(duration: 2)) {
+                    opacity = 1
                 }
-                .padding(.horizontal)
-                .frame(maxWidth: .infinity)
-                .padding(.top, 20)
-                    QuestionView(title: viewModel.currentQuestion?.title ?? "")
-                        .padding(.top, 16)
-                        .padding(.bottom, 10)
-                    
-                    if let answers = viewModel.currentQuestion?.answers {
-                        var labels = ["A: ", "B: ", "C: ", "D: "]
-                        
-                        ForEach(Array(zip(answers.indices, answers)), id: \.0) { index, item in
-                            VStack(spacing: 18) {
-                                AnswerButtonView(label: labels[index], text: item.title, action: {
-                                    answerQuestion(isRight: item.isRight)
-                                })
-                            }
-                        }
-                    }
             }
-        }.onAppear{
-            viewModel.startNewGame()
+        } else {
+            ResultView(cash: viewModel.currentStat.price, isWin: false)
+        }
+        
+        NavigationLink(destination: CurrentStats(), isActive: $showingStats) {
+            CurrentStats()
+        }.onChange(of: viewModel.sholdShowStatScreen) { newValue in
+            showingStats = newValue
         }
     }
 }
 
 private extension GameView {
     func answerQuestion(isRight: Bool) {
-        viewModel.newQuestion()
+        viewModel.answerQuestion(isRight: isRight)
     }
 }
-
-
-struct GameView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameView(username: "sdaDas")
-    }
-}
-

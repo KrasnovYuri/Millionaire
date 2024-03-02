@@ -1,4 +1,5 @@
 import SwiftUI
+import SoundManager
 
 struct StartView: View {
     @State private var isShowingLoginView = false
@@ -53,6 +54,8 @@ struct StartView: View {
 
                 }
             }
+        }.onAppear {
+            //SoundManager.shared.play(.start)
         }
     }
 }

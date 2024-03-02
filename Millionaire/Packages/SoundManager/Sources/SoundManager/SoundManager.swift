@@ -4,33 +4,39 @@
 import SwiftUI
 import AVFoundation
 
+public protocol SoundManagerDelegate: AnyObject {
+    func didFinishPlay()
+    func didChangeSound(sound: SoundType)
+}
+
 public enum SoundType: String {
     case correct = "correctAnswer"
     case incorrect = "incorrectAnswer"
     case pauseUntilResult
-    case win = "playerWin"
+//    case win = "playerWin"
     case timer = "timeOn"
+    case start = "sound-start"
+    case startGame = "sound-start-game"
+    
+    var sound: Data? {
+        NSDataAsset(name: rawValue, bundle: .module)?.data
+    }
 }
 
-public final class SoundManager {
+public final class SoundManager: NSObject {
+    public weak var delegate: SoundManagerDelegate?
     public static let shared = SoundManager()
     private var player: AVAudioPlayer?
     
-    private init() {}
-    
-    public func play(filename: SoundType) {
-        let name = filename.rawValue
-        
-        guard let data = NSDataAsset(name: name, bundle: .module)?.data else {
-            print("Аудиофайл \(filename) не найден")
-            return
-        }
-        
+    public func play(_ type: SoundType) {
+        guard let sound = type.sound else { return }
         do {
-            player = try AVAudioPlayer(data: data)
+            player = try AVAudioPlayer(data: sound)
+            player?.delegate = self
             player?.play()
+            self.delegate?.didChangeSound(sound: type)
         } catch {
-            print("Невозможности воспроизвести аудиофайл \(name)")
+            print(error.localizedDescription)
         }
     }
     
@@ -41,5 +47,11 @@ public final class SoundManager {
     public func stop() {
         player?.stop()
         player?.currentTime = 0
+    }
+}
+
+extension SoundManager: AVAudioPlayerDelegate {
+    public func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        delegate?.didFinishPlay()
     }
 }

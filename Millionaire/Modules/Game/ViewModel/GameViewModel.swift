@@ -4,7 +4,7 @@ import Questions
 
 protocol GameViewModelProtocol: ObservableObject {
     var currentQuestion: Question? { get }
-    func startNewGame()
+    func fetchNewQuestion()
     func answerQuestion(isRight: Bool)
 }
 
@@ -15,7 +15,14 @@ final class GameViewModel {
     @Published var currentTime: Int
     @Published var currentQuestion: Question?
     @Published var currentStat: StatQuestion
+    @Published var enabledHelers: [Helper] = [
+        .init(type: .fifty, isEnable: true),
+        .init(type: .hall, isEnable: true),
+        .init(type: .friend, isEnable: true),
+        .init(type: .warning, isEnable: true),
+    ]
     
+    let maxHelpersCount: Int = 4
     private let questionStorage: QuestionStorageProtocol = QuestionStorage()
     private let questionManager: QuestionManagerProtocol
     private let maxTimeLimit = 30
@@ -31,11 +38,10 @@ final class GameViewModel {
 }
 
 extension GameViewModel: GameViewModelProtocol {
-    func startNewGame() {
-        guard currentStat == .one else { return }
+    func fetchNewQuestion() {
         isWaiting = false
         soundManagaer.delegate = self
-        soundManagaer.play(.startGame)
+        soundManagaer.play(.timer)
         currentSound = .startGame
         currentQuestion = questionManager.fetchNewQuestion(current: currentStat)
         startTimer()
@@ -46,23 +52,54 @@ extension GameViewModel: GameViewModelProtocol {
         soundManagaer.play(.pauseUntilResult)
         timer?.invalidate()
         guard isRight else {
-            withDelay(delay: 3, action: { [weak self] in
+            withDelay(delay: 2, action: { [weak self] in
                 self?.soundManagaer.play(.incorrect)
                 self?.isWaiting = false
                 self?.isLoser = true
             })
             return
         }
-        currentTime = maxTimeLimit
-        currentStat = StatQuestion(rawValue: currentStat.rawValue + 1) ?? .one
-        withDelay(delay: 3, action: { [weak self] in
+        withDelay(delay: 2, action: { [weak self] in
             guard let `self` else { return }
             soundManagaer.play(.correct)
             isWaiting = false
             sholdShowStatScreen = true
-            currentQuestion = questionManager.fetchNewQuestion(current: currentStat)
-            startTimer()
+            currentStat = StatQuestion(rawValue: currentStat.rawValue + 1) ?? .one
+            currentTime = maxTimeLimit
         })
+    }
+    
+    func tapHelp(_ helper: Helper) {
+        guard var answers = currentQuestion?.answers else { return }
+                
+        var indices = answers.enumerated()
+            .filter { !$0.element.isRight }
+            .map { $0.offset }
+        indices.shuffle()
+        
+        let updateAnswers: (Int) -> Void = { index in
+            answers[index] = Answer(number: index, title: "", isRight: false)
+        }
+        
+        switch helper.type {
+        case .fifty:
+            indices.prefix(2).forEach(updateAnswers)
+        case .hall, .friend:
+            indices.forEach(updateAnswers)
+        case .warning:
+            if let index = indices.first {
+                updateAnswers(index)
+            }
+        }
+        
+        self.currentQuestion?.answers = answers
+        
+        if let helpIndex = enabledHelers
+            .firstIndex(where: { $0.type == helper.type }) {
+            var newHelper = helper
+            newHelper.isEnable = false
+            enabledHelers[helpIndex] = newHelper
+        }
     }
 }
 
@@ -74,18 +111,8 @@ extension GameViewModel: SoundManagerDelegate {
     func didFinishPlay() {
         guard let currentSound else { return }
         switch currentSound {
-        case .timer:
+        case .timer, .start, .startGame, .incorrect, .pauseUntilResult, .correct:
             break
-        case .start:
-            break
-        case .startGame:
-            soundManagaer.play(.timer)
-        case .incorrect:
-            break
-        case .pauseUntilResult:
-            break
-        case .correct:
-            soundManagaer.play(.timer)
         }
     }
 }

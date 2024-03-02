@@ -1,21 +1,10 @@
 import SwiftUI
 
-//Экран результата игры (проиграл/нет) + палец 
-
-//struct ResultView: View {
-//    let cash: UInt
-//    let isWin: Bool
-//    
-//    var body: some View {
-//        Text(isWin ? "Win" : "Lose")
-//    }
-//}
-
-
 struct ResultView: View {
+    @State private var startNewGame = false
     let earnedMoney: UInt
-    let thumbs:String
-
+    let isWin: Bool
+    
     var body: some View {
         ZStack {
             GradientBackgroundView()
@@ -31,11 +20,11 @@ struct ResultView: View {
                 Text("Ваш выигрыш: \(earnedMoney) ₽")
                     .foregroundStyle(.white)
                     .font(.headline.bold())
-                Image(thumbs)
+                Image(isWin ? "winResultIcon" : "loseResultIcon")
                     .resizable()
                     .frame(width: 166, height: 166, alignment : .bottom)
                 Button(action: {
-                    // newGame
+                    startNewGame = true
                 }) {
                     Text("играть еще раз")
                         .foregroundColor(.white)
@@ -45,19 +34,11 @@ struct ResultView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.purple, lineWidth: 3)
                 )
+                .fullScreenCover(isPresented: $startNewGame, content: {
+                    StartView()
+                })
                 Spacer()
             }
         }
     }
-    
-    init(earnedMoney: UInt) {
-        self.earnedMoney = earnedMoney
-        self.thumbs = earnedMoney >= 100 ? "winResultIcon" : "loseResultIcon"
-    }
 }
-
-//#Preview {
-//    ResultsView(earnedMoney: 100)
-//}
-
-

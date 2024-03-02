@@ -5,6 +5,12 @@ public struct Answer: Codable {
     public let title: String
     public let isRight: Bool
     
+    public init(number: Int, title: String, isRight: Bool) {
+        self.number = number
+        self.title = title
+        self.isRight = isRight
+    }
+    
     enum CodingKeys: String, CodingKey {
         case number, title
         case isRight = "is_right"

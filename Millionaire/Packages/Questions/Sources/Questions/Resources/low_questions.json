@@ -1,0 +1,460 @@
+[
+    {
+        "title": "Какая столица Португалии?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Минск",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Рига",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Лиссабон",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Сыктыквар",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Конец Первой мировой войны",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "1918 г.",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "1917 г.",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "1945 г.",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Такой не было",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "На каких ножках стояла избушка Бабы Яги?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Свиных",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Металлических",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Фундаментных",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Куриных",
+                "is_right": true
+            }
+        ]
+    },
+    
+    {
+        "title": "Что получают выпускники после окончания обучения?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Славу",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Деньги",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Диплом",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Фингал",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Так называется самая большая планета Солнечной системы.",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Земля",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Юпитер",
+                "is_right": true
+            },
+            {
+                "number": 3,
+                "title": "Нептун",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Марс",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "С ним и будильник не нужен.",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "С соседом",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "С мужем",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "С петухом",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "С сокамерником",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Как называется самая высокая трава?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Бамбук",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Папоротник",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Борщевик",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Камыш",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Куда заносят животных, которых исчезают?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "В блокнот",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "В зоопарк",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "В музей",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "В Красную книгу",
+                "is_right": true
+            }
+        ]
+    },
+    
+    {
+        "title": "Гараж - для машин. А как называется помещение для самолетов?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Сарай",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Парковка",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Ангар",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Оставляют на улице",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "В какой стране находится самое высокое здание?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "В Южном Судане",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "В Дубаи",
+                "is_right": true
+            },
+            {
+                "number": 3,
+                "title": "В Китае",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "В США",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Что вы получаете, когда вы кипятите воду?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Кисель",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Пиво",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Сок",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Пар",
+                "is_right": true
+            }
+        ]
+    },
+    
+    {
+        "title": "В сиквеле какого праздничного фильма снялся Дональд Трамп?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Один дома",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Один дома 2: Затерянный в Нью-Йорке",
+                "is_right": true
+            },
+            {
+                "number": 3,
+                "title": "Ричи Рич",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Маленькие негодяи",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Как называются четыре Факультета Хогвартса?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Гриффиндор, Пуффендуй, Когтевран и Слизерин",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Грифон, Ворон, Слон и Змея",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Север, Восток, Запад и Юг",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Красный, Синий, Зеленый и Оранжевый",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Из чего сделан самый крепкий дом в “Трех поросятах”?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Кирпич",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Палочки",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Солома",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Бамбук",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "В какой стране находится Прага?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Испания",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Бразилия",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Чехия",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Англия",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какого цвета была таблетка, которую принимает Нео в фильме “Матрица”?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Красный",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Синий",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Зеленый",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Желтый",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Символом какого ресторана является клоун?",
+        "level": 0,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Макдональдс",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Бургер Кинг",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "KFC",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Маленькие Цезари",
+                "is_right": false
+            }
+        ]
+    }
+]

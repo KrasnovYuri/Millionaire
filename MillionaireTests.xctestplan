@@ -1,0 +1,31 @@
+{
+  "configurations" : [
+    {
+      "id" : "F32CB9D9-B011-4AD9-A6D0-ED0F66164C23",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Millionaire.xcodeproj",
+        "identifier" : "8059C3D52B8FC16B002E3182",
+        "name" : "MillionaireTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Millionaire\/Packages\/Questions",
+        "identifier" : "QuestionsTests",
+        "name" : "QuestionsTests"
+      }
+    }
+  ],
+  "version" : 1
+}

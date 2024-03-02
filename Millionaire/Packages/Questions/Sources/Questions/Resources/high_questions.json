@@ -1,0 +1,677 @@
+[
+    {
+        "title": "Кто был премьер-министр Великобритании с 1841 по 1846 год?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Роберт Пил",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Уинстон Черчилль",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Принц Чарльз",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Джун Лоу",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какой химический символ для серебра?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Ds",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Si",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "S",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Ag",
+                "is_right": true
+            }
+        ]
+    },
+    
+    {
+        "title": "Какая самая маленькая птица в мире?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Бормотушка",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Пчела колибри",
+                "is_right": true
+            },
+            {
+                "number": 3,
+                "title": "Бабочка",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Синица-ремез",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Что на визитной карточке Аль Капоне было указано, чем он занимается?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Дегустатор спиртных напитков",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Консультант",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Продавец подержанной мебели",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Сварочник 4 разряда",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "В каком городе расположен Букингемский дворец?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "В Букингеме",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "В Лондоне",
+                "is_right": true
+            },
+            {
+                "number": 3,
+                "title": "В Дрездене",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "В Бишкеке",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какая страна послала армаду, чтобы атаковать Англию в 1588 году?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Япония",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Россия",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Испания",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Германия",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какой город расположен как в Азии, так и в Европе?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Стамбул",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Вена",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Будапешт",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Санкт-Петербург",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Что является третьим наиболее распространенным газом в атмосфере Земли?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Азот",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Углекислый",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Кислород",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Аргон",
+                "is_right": true
+            }
+        ]
+    },
+    
+    {
+        "title": "Какое название самого высокого в мире водопада?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Виктория",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Вернал",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Анхель",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Ниагарский",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Кто написал знаменитый дневник, скрываясь от нацистов в Амстердаме?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Анна Франк",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Бриджит Джонс",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Мария Кюри",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Хелен Келлер",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Что означает термин “пиано”?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "В бодром темпе",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "В мягком темпе",
+                "is_right": true
+            },
+            {
+                "number": 3,
+                "title": "В умеренно медленном темпе",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "В быстром темпе",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какая самая маленькая планета в нашей Солнечной системе?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Земля",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Венера",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Марс",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Меркурий",
+                "is_right": true
+            }
+        ]
+    },
+    
+    {
+        "title": "Кто был главой государства в Японии во время второй мировой войны?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Император Хирохито",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Император Муцухито",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Император Акихито",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Император Ёсихито",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Сколько вкусовых рецепторов имеет средний человеческий язык?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "100",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "1,000",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "10,000",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "100,000",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какова длина олимпийского плавательного бассейна?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "25 метров",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "50 метров",
+                "is_right": true
+            },
+            {
+                "number": 3,
+                "title": "60 метров",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "40 метров",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какая единственная страна принимала участие во всех чемпионатах мира по футболу?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Бразилия",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Англия",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Испания",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Аргентина",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Сколько колец на олимпийском флаге?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Семь",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Шесть",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Пять",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Четыре",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Сколько было пилотируемых высадок на Луну?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Восемь",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Пять",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Шесть",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Семь",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "В каком году была подписана Декларация независимости США?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "1676",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "1678",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "1775",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "1776",
+                "is_right": true
+            }
+        ]
+    },
+    
+    {
+        "title": "Каково было первоначальное название Нью-Йорка?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Новый Амстердам",
+                "is_right": true
+            },
+            {
+                "number": 2,
+                "title": "Большое яблоко",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Имперский штат",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Готэм",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Кто из отцов-основателей известен своей большой подписью на Декларации независимости Соединенных Штатов?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Джордж Вашингтон",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Александр Гамильтон",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Бенджамин Франклин",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Джон Хэнкок",
+                "is_right": true
+            }
+        ]
+    },
+    
+    {
+        "title": "Кто написал роман “Убить пересмешника”, опубликованный в 1960 году?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Роберт Фрост",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Джон Стейнбек",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Харпер Ли",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Дж. Д. Сэлинджер",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Какая страна является самой маленькой в мире?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Мальта",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Мальдивы",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Ватикан",
+                "is_right": true
+            },
+            {
+                "number": 4,
+                "title": "Монако",
+                "is_right": false
+            }
+        ]
+    },
+    
+    {
+        "title": "Из какого вещества состоят ногти?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Серотонин",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Эпидермис",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Меланин",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Кератин",
+                "is_right": true
+            }
+        ]
+    },
+    
+    {
+        "title": "Что означает термин ДНК?",
+        "level": 2,
+        "answers": [
+            {
+                "number": 1,
+                "title": "Дезоксирибонуклеарная кислота",
+                "is_right": false
+            },
+            {
+                "number": 2,
+                "title": "Дуорибонуклеиновая кислота",
+                "is_right": false
+            },
+            {
+                "number": 3,
+                "title": "Дуоксирибонуклеиновая кислота",
+                "is_right": false
+            },
+            {
+                "number": 4,
+                "title": "Дезоксирибонуклеиновая кислота",
+                "is_right": true
+            }
+        ]
+    }
+]
+

@@ -23,13 +23,13 @@ struct QuestionRow: View {
         .foregroundColor(.white)
         .background(RoundedRectangle(cornerRadius: 10).fill(color))
     }
-
+    
     enum RowColors {
         case standardColor
         case fireproofAmountColor
         case answerColor
     }
-
+    
     func getLinearGradient() -> LinearGradient {
         switch colorType {
         case .standardColor:
@@ -55,6 +55,7 @@ struct QuestionRow: View {
 }
 
 struct CurrentStats: View {
+    @Environment(\.dismiss) var dismiss
     @State var fiftyFiftyButtonPressed = false
     @State var helpAudienceButtonPressed = false
     @State var callFriendButtonPressed = false
@@ -105,31 +106,15 @@ struct CurrentStats: View {
                             }
                         }
                     }
+                }.onTapGesture {
+                    dismiss()
                 }
                 .padding()
-                
-                HStack(spacing: 180){
-                    Button(action: {
-                        
-                    }) {
-                        Text("Забрать деньги")
-                            .underline()
-                    }
-                    .foregroundColor(.white)
-                    
-                    Button(action: {
-                        
-                    }) {
-                        Text("Далее")
-                            .underline()
-                    }
-                    .foregroundColor(.white)
-                }
+            }
+        }.onAppear {
+            Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+                self.dismiss()
             }
         }
     }
-}
-
-#Preview {
-    CurrentStats()
 }

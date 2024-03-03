@@ -10,14 +10,14 @@ struct ScoreView: View {
         ZStack {
             GradientBackgroundView()
             VStack {
-            Image(.logoLarge)
-                .resizable()
-                .frame(width: 251, height: 259, alignment : .bottom)
-                .scaledToFit()
-            Spacer()
-            Text("Результаты игр")
-                .foregroundStyle(.white)
-                .font(.title)
+                Image(.logoLarge)
+                    .resizable()
+                    .frame(width: 251, height: 259, alignment : .bottom)
+                    .scaledToFit()
+                Spacer()
+                Text("Результаты игр")
+                    .foregroundStyle(.white)
+                    .font(.title)
                 Form {
                     ForEach(tableScore) { record in
                         HStack {
@@ -34,13 +34,12 @@ struct ScoreView: View {
                         .listRowBackground(Color.clear)
                     }
                 }
-                .scrollContentBackground(.hidden)
-                }
             }
-            }
+        }
+    }
     
     init(user: String, points: UInt16) {
-
+        
         if tableScore.count == 10 {
             tableScore.removeFirst()
         }
@@ -48,7 +47,7 @@ struct ScoreView: View {
         tableScore.append(UserPoints(user: user, points: points))
     }
     
-    }
+}
 
 //#Preview {
 //    ScoreView(user: "User", points: 17)

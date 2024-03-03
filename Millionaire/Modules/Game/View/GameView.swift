@@ -2,13 +2,6 @@ import SwiftUI
 import SoundManager
 import Questions
 
-//Максим
-//Сделать задержку после ответа и моргание кнопки ответа на неск сек + заменить музыку
-//После "проверки" подсветить кнопку красным/зеленым и перейти на экран статистики подсветим ответ
-//Спустя несколько секунд вернуться назад и продолжить игру
-//Логику подсказок реализовать
-//Анимация кнопок при ответе (влево, вправо) пример видео в дискорд
-
 struct GameView: View {
     @State private var showingStats = false
     @State private var opacity = 0.0
@@ -23,19 +16,17 @@ struct GameView: View {
             .disabled(viewModel.isWaiting)
             .opacity(opacity)
             .onAppear{
-                viewModel.startNewGame()
+                viewModel.fetchNewQuestion()
                 withAnimation(.easeInOut(duration: 2)) {
                     opacity = 1
                 }
-            }
+            }.sheet(isPresented: $viewModel.sholdShowStatScreen, onDismiss: {
+                viewModel.fetchNewQuestion()
+            }, content: {
+                CurrentStats()
+            })
         } else {
-            ResultView(cash: viewModel.currentStat.price, isWin: false)
-        }
-        
-        NavigationLink(destination: CurrentStats(), isActive: $showingStats) {
-            CurrentStats()
-        }.onChange(of: viewModel.sholdShowStatScreen) { newValue in
-            showingStats = newValue
+            ResultView(earnedMoney: viewModel.currentStat.price, isWin: false)
         }
     }
 }

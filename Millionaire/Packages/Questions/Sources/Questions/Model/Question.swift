@@ -3,7 +3,7 @@ import Foundation
 public struct Question: Codable {
     public let title: String
     public let level: QuestionLevel
-    public let answers: [Answer]
+    public var answers: [Answer]
 }
 
 extension Question: Equatable {

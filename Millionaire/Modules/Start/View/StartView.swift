@@ -55,7 +55,7 @@ struct StartView: View {
                 }
             }
         }.onAppear {
-            //SoundManager.shared.play(.start)
+            SoundManager.shared.play(.start)
         }
     }
 }

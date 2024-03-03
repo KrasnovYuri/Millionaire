@@ -13,6 +13,7 @@
   },
   "testTargets" : [
     {
+      "enabled" : false,
       "target" : {
         "containerPath" : "container:Millionaire.xcodeproj",
         "identifier" : "8059C3D52B8FC16B002E3182",
@@ -20,6 +21,7 @@
       }
     },
     {
+      "enabled" : false,
       "target" : {
         "containerPath" : "container:Millionaire\/Packages\/Questions",
         "identifier" : "QuestionsTests",

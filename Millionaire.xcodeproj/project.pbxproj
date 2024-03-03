@@ -10,6 +10,7 @@
 		4D97F44A2B9380F000ED022C /* MainGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97F4492B9380F000ED022C /* MainGameView.swift */; };
 		4D97F44C2B93D76C00ED022C /* Collection+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97F44B2B93D76C00ED022C /* Collection+.swift */; };
 		4D97F44E2B93E2D500ED022C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97F44D2B93E2D500ED022C /* Helper.swift */; };
+		4DD75DF82B946B5D005DE473 /* StatQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059C3E62B8FDA0C002E3182 /* StatQuestion.swift */; };
 		80266CFD2B8B6C5E00DE05DC /* MillionaireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80266CFC2B8B6C5E00DE05DC /* MillionaireApp.swift */; };
 		80266D012B8B6C5F00DE05DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80266D002B8B6C5F00DE05DC /* Assets.xcassets */; };
 		80266D042B8B6C5F00DE05DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80266D032B8B6C5F00DE05DC /* Preview Assets.xcassets */; };
@@ -520,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DD75DF82B946B5D005DE473 /* StatQuestion.swift in Sources */,
 				8059C3E12B8FC30B002E3182 /* Queue.swift in Sources */,
 				8059C3E22B8FC30B002E3182 /* QueueProtocol.swift in Sources */,
 				8059C3E02B8FC2B2002E3182 /* QuestionManager.swift in Sources */,

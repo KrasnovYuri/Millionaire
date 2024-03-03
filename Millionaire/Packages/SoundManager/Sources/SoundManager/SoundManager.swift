@@ -4,11 +4,6 @@
 import SwiftUI
 import AVFoundation
 
-public protocol SoundManagerDelegate: AnyObject {
-    func didFinishPlay()
-    func didChangeSound(sound: SoundType)
-}
-
 public enum SoundType: String {
     case correct = "correctAnswer"
     case incorrect = "incorrectAnswer"
@@ -24,7 +19,6 @@ public enum SoundType: String {
 }
 
 public final class SoundManager: NSObject {
-    public weak var delegate: SoundManagerDelegate?
     public static let shared = SoundManager()
     private var player: AVAudioPlayer?
     
@@ -32,9 +26,7 @@ public final class SoundManager: NSObject {
         guard let sound = type.sound else { return }
         do {
             player = try AVAudioPlayer(data: sound)
-            player?.delegate = self
             player?.play()
-            self.delegate?.didChangeSound(sound: type)
         } catch {
             print(error.localizedDescription)
         }
@@ -47,11 +39,5 @@ public final class SoundManager: NSObject {
     public func stop() {
         player?.stop()
         player?.currentTime = 0
-    }
-}
-
-extension SoundManager: AVAudioPlayerDelegate {
-    public func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        delegate?.didFinishPlay()
     }
 }

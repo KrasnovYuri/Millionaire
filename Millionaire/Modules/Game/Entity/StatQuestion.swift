@@ -8,11 +8,11 @@ enum StatQuestion: Int, CaseIterable {
     
     var level: QuestionLevel {
         switch self {
-        case .one, .second, .third, .fourth, .fifth:
+        case .one, .second, .third, .fourth:
             return .low
-        case .sixth, .seventh, .eighth, .ninth, .tenth:
+        case .fifth, .sixth, .seventh, .eighth, .ninth:
             return .medium
-        case .eleventh, .twelfth, .thirteenth, .fourteenth, .fifteenth:
+        case .tenth, .eleventh, .twelfth, .thirteenth, .fourteenth, .fifteenth:
             return .high
         }
     }

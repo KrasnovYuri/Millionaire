@@ -55,8 +55,6 @@ final class QuestionsTests: XCTestCase {
     }
     
     func testEqutable() {
-//        let firstQuestion = allQuestions.first!
-//        allQuestions.append(firstQuestion)
         let questionSet: Set<Question> = Set(allQuestions)
         XCTAssertTrue(questionSet.count == allQuestions.count)
     }

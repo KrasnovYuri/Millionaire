@@ -9,24 +9,27 @@ struct GameView: View {
     let username: String
     
     var body: some View {
-        if !viewModel.isLoser {
+        switch viewModel.gameState {
+        case .lose:
+            ResultView(earnedMoney: viewModel.currentStat.price, isWin: false)
+        case .win:
+            ResultView(earnedMoney: viewModel.currentStat.price, isWin: true)
+        case .default:
             MainGameView(viewModel: viewModel, didAnswer: { isRight in
                 answerQuestion(isRight: isRight)
             })
             .disabled(viewModel.isWaiting)
             .opacity(opacity)
             .onAppear{
-                viewModel.fetchNewQuestion()
+                viewModel.fetchNewQuestion(isNewGame: true)
                 withAnimation(.easeInOut(duration: 2)) {
                     opacity = 1
                 }
             }.sheet(isPresented: $viewModel.sholdShowStatScreen, onDismiss: {
-                viewModel.fetchNewQuestion()
+                viewModel.fetchNewQuestion(isNewGame: false)
             }, content: {
-                CurrentStats()
+                CurrentStats(currentQuestion: viewModel.currentStat)
             })
-        } else {
-            ResultView(earnedMoney: viewModel.currentStat.price, isWin: false)
         }
     }
 }

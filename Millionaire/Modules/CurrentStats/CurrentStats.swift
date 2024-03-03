@@ -55,6 +55,7 @@ struct QuestionRow: View {
 }
 
 struct CurrentStats: View {
+    let currentQuestion: StatQuestion
     @Environment(\.dismiss) var dismiss
     @State var fiftyFiftyButtonPressed = false
     @State var helpAudienceButtonPressed = false
@@ -99,7 +100,17 @@ struct CurrentStats: View {
                 ScrollView {
                     LazyVStack(spacing: 7) {
                         ForEach(StatQuestion.allCases.reversed(), id: \.price) { stat in
-                            QuestionRow(questionNumber: stat.rawValue, cost: Int(stat.price), colorType: stat.isFireproof ? .fireproofAmountColor : .standardColor)
+                            let isCurrent = currentQuestion == stat
+                            let color: QuestionRow.RowColors = {
+                                switch isCurrent {
+                                case true:
+                                        .answerColor
+                                case false:
+                                    stat.isFireproof ? .fireproofAmountColor : .standardColor
+                                }
+                            }()
+                            
+                            QuestionRow(questionNumber: stat.rawValue, cost: Int(stat.price), colorType: color)
                         }
                     }
                 }.onTapGesture {

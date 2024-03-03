@@ -2,16 +2,22 @@ import SwiftUI
 import SoundManager
 import Questions
 
+enum GameState {
+    case lose
+    case win
+    case `default`
+}
+
 protocol GameViewModelProtocol: ObservableObject {
     var currentQuestion: Question? { get }
-    func fetchNewQuestion()
+    func fetchNewQuestion(isNewGame: Bool)
     func answerQuestion(isRight: Bool)
 }
 
 final class GameViewModel {
     @Published var isWaiting = false
     @Published var sholdShowStatScreen = false
-    @Published var isLoser = false
+    @Published var gameState: GameState = .default
     @Published var currentTime: Int
     @Published var currentQuestion: Question?
     @Published var currentStat: StatQuestion
@@ -38,13 +44,15 @@ final class GameViewModel {
 }
 
 extension GameViewModel: GameViewModelProtocol {
-    func fetchNewQuestion() {
+    func fetchNewQuestion(isNewGame: Bool) {
         isWaiting = false
-        soundManagaer.delegate = self
         soundManagaer.play(.timer)
         currentSound = .startGame
         currentQuestion = questionManager.fetchNewQuestion(current: currentStat)
         startTimer()
+        if !isNewGame {
+            currentStat = StatQuestion(rawValue: currentStat.rawValue + 1) ?? .one
+        }
     }
     
     func answerQuestion(isRight: Bool) {
@@ -55,7 +63,7 @@ extension GameViewModel: GameViewModelProtocol {
             withDelay(delay: 2, action: { [weak self] in
                 self?.soundManagaer.play(.incorrect)
                 self?.isWaiting = false
-                self?.isLoser = true
+                self?.gameState = .lose
             })
             return
         }
@@ -63,9 +71,12 @@ extension GameViewModel: GameViewModelProtocol {
             guard let `self` else { return }
             soundManagaer.play(.correct)
             isWaiting = false
-            sholdShowStatScreen = true
-            currentStat = StatQuestion(rawValue: currentStat.rawValue + 1) ?? .one
             currentTime = maxTimeLimit
+            if currentStat == StatQuestion.allCases.last {
+                gameState = .win
+            } else {
+                sholdShowStatScreen = true
+            }
         })
     }
     
@@ -103,27 +114,13 @@ extension GameViewModel: GameViewModelProtocol {
     }
 }
 
-extension GameViewModel: SoundManagerDelegate {
-    func didChangeSound(sound: SoundType) {
-        self.currentSound = sound
-    }
-    
-    func didFinishPlay() {
-        guard let currentSound else { return }
-        switch currentSound {
-        case .timer, .start, .startGame, .incorrect, .pauseUntilResult, .correct:
-            break
-        }
-    }
-}
-
 private extension GameViewModel {
     func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true,
                                      block: { [weak self] timer in
             guard let `self` else { return }
             guard currentTime > .zero else {
-                isLoser = true
+                gameState = .lose
                 timer.invalidate()
                 return
             }

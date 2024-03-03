@@ -28,7 +28,7 @@ struct RulesView: View {
                         .frame(height: 507)
                         .background(
                             RoundedRectangle(cornerRadius: 20)
-                                .foregroundStyle(LinearGradient(colors: [.blue, .purple], startPoint: .leading, endPoint: .trailing))
+                                .foregroundStyle(LinearGradient(colors: [Color(hex: 0x14144C), Color(hex: 0x2D1158)], startPoint: .leading, endPoint: .trailing))
                         )
                         .padding([.horizontal, .top], 16)
                         .padding(.bottom, 10)
